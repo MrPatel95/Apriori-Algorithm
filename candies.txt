@@ -1,0 +1,50 @@
+AlmondJoy,BabyRuth,Hershey,Cotton Candy,Twix,HeathBar
+BabyRuth,Cadbury,MilkyWay,Cotton Candy,KitKat,HeathBar,Snickers
+AlmondJoy,BabyRuth,MilkyWay,Cotton Candy,Twix,HeathBar,Snickers
+AlmondJoy,Hershey,Cadbury,Twix,KitKat,HeathBar,Snickers
+AlmondJoy,BabyRuth,Hershey,MilkyWay,Cotton Candy,KitKat,HeathBar
+AlmondJoy,BabyRuth,Hershey,Cotton Candy,Twix,KitKat,Snickers
+Cadbury,Cotton Candy,Twix,KitKat,HeathBar,Snickers
+AlmondJoy,BabyRuth,Cadbury,MilkyWay,KitKat,HeathBar
+AlmondJoy,Hershey,Cadbury,Twix,HeathBar,Snickers
+AlmondJoy,BabyRuth,MilkyWay,Cotton Candy,Twix,KitKat,HeathBar
+AlmondJoy,MilkyWay,Twix,KitKat,Snickers
+Hershey,Cadbury,Cotton Candy,Twix,KitKat,HeathBar
+AlmondJoy,BabyRuth,Hershey,Cadbury,Cotton Candy,Twix,KitKat,HeathBar,Snickers
+AlmondJoy,BabyRuth,Hershey,MilkyWay,KitKat,Snickers
+Hershey,Cadbury,MilkyWay,Twix,KitKat,HeathBar
+BabyRuth,Cadbury,MilkyWay,Cotton Candy,KitKat,HeathBar
+AlmondJoy,Cadbury,Cotton Candy,Twix,KitKat,HeathBar,Snickers
+AlmondJoy,BabyRuth,Hershey,Cadbury,MilkyWay,Cotton Candy,KitKat,HeathBar
+AlmondJoy,Cadbury,MilkyWay,Cotton Candy,Twix,Snickers
+AlmondJoy,Hershey,Cadbury,MilkyWay,Cotton Candy,Twix,KitKat
+AlmondJoy,BabyRuth,MilkyWay,Twix,HeathBar,Snickers
+AlmondJoy,BabyRuth,Cadbury,KitKat,HeathBar,Snickers
+Hershey,BabyRuth,Cadbury,Cotton Candy,Twix,KitKat
+AlmondJoy,BabyRuth,Hershey,Cadbury,KitKat,Snickers
+AlmondJoy,Hershey,BabyRuth,Cadbury,MilkyWay,Cotton Candy,KitKat,HeathBar
+Hershey,Snickers,MilkyWay,HeathBar,BabyRuth,AlmondJoy,Cotton Candy,Twix,Cadbury
+KitKat,Snickers,MilkyWay,HeathBar,BabyRuth,Cotton Candy,Cadbury
+Hershey,HeathBar,BabyRuth,AlmondJoy,Cotton Candy,Twix
+AlmondJoy,Cotton Candy,Twix,MilkyWay,HeathBar
+KitKat,Hershey,Snickers,MilkyWay,HeathBar,BabyRuth,Twix
+KitKat,MilkyWay,BabyRuth,AlmondJoy,Cotton Candy,Twix,Cadbury
+KitKat,BabyRuth,MilkyWay,Snickers,AlmondJoy,Cotton Candy,Twix,Cadbury
+KitKat,Hershey,Snickers,MilkyWay,BabyRuth,AlmondJoy,Cotton Candy,Twix
+KitKat,MilkyWay,HeathBar,BabyRuth,AlmondJoy,Cotton Candy,Twix
+Hershey,MilkyWay,HeathBar,AlmondJoy,Cotton Candy,Twix,Cadbury
+KitKat,Hershey,MilkyWay,BabyRuth,AlmondJoy,Twix
+AlmondJoy,Snickers,Twix,HeathBar,BabyRuth
+KitKat,Hershey,Snickers,HeathBar,BabyRuth,AlmondJoy
+Hershey,MilkyWay,HeathBar,BabyRuth,Cotton Candy,Twix,Cadbury
+KitKat,Hershey,Snickers,AlmondJoy,Cotton Candy,Twix
+Hershey,MilkyWay,HeathBar,Snickers,AlmondJoy,Cotton Candy,Cadbury
+Snickers,MilkyWay,HeathBar,BabyRuth,AlmondJoy,Twix,Cadbury
+KitKat,Hershey,Snickers,MilkyWay,BabyRuth,Twix,Cadbury
+KitKat,Cadbury,Cotton Candy,Hershey,HeathBar
+KitKat,Hershey,Snickers,MilkyWay,BabyRuth,AlmondJoy,Cotton Candy
+KitKat,Snickers,MilkyWay,BabyRuth,AlmondJoy,Cotton Candy,Twix
+KitKat,Hershey,Snickers,MilkyWay,BabyRuth,Cotton Candy,Twix
+KitKat,Hershey,MilkyWay,HeathBar,Snickers,AlmondJoy,Cotton Candy,Twix
+Hershey,BabyRuth,AlmondJoy,Cotton Candy,Twix,Cadbury
+KitKat,Hershey,MilkyWay,HeathBar,AlmondJoy,Cotton Candy,Twix,Cadbury
