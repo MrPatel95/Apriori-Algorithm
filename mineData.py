@@ -1,70 +1,24 @@
 '''
-Base Case for Regression::
-if len(finalList) == 2:
-    return finnalList
-
-
-to generate C1:
-        Input:
-            [
-                ["A"],
-                ["B"],
-                ["C"],
-                ["D"],
-                ["E"]
-            ]
-        Output:
-            [
-                ["A"], 3,
-                ["B"], 4,
-                ["C"], 5,
-                ["D"], 5,
-                ["E"], 1
-            ]
 to generate C2:
         Input:
-            [
-                ["A"],
-                ["B"],
-                ["C"],
-                ["D"]
-            ]
+            [ ["A"], ["B"], ["C"], ["D"] ]
         Output:
-            [
-                ["A", "B"], 2,
-                ["A", "C"], 1,
-                ["A", "D"], 2,
-                ["B", "C"], 3,
-                ["B", "D"], 2,
-                ["C", "D"], 4,
-            ]
+            [ ["A", "B"], 2, ["A", "C"], 1, ["A", "D"], 2, ["B", "C"], 3, ["B", "D"], 2, ["C", "D"], 4, ]
 to generate C3:
         Input:
-            [
-                ["A", "B", "D"],
-                ["B", "C", "D"]
-            ]
+            [ ["A", "B", "D"], ["B", "C", "D"] ]
         Output:
-            [
-                ["B", "C", "D"], 2
-            ]
-
-
+            [ ["B", "C", "D"], 2 ]
 ####################################################
 
 
-generateFrequentSets = (listOfItems, minimumSupport)
-    scan the array by every other index.
-    If the Index is less than the minimumSupport:
-        get the array of CurrentIndex -1 and remove it from the array
-        store the removed list in a seperate list
-
 '''
-CandidateList = [["A", "B"], 2, ["A", "C"], 1, ["A", "D"], 2, ["B", "C"], 3, ["B", "D"], 2, ["C", "D"], 4,]
-noOfTransactions = 7
-minimumSupport = 20
-eleminatedItemsArray = []
 
+
+'' ''''''''''''''''''''''''''''
+    #   Definition section states
+'' '''''''''''''''''''''''''''''
+#   This function generates FrequentSets and stroes them in an array
 def generateFrequentItemSet(CandidateList, noOfTransactions, minimumSupport):
     returnArray = []
     for i in range(len(CandidateList)):
@@ -76,23 +30,7 @@ def generateFrequentItemSet(CandidateList, noOfTransactions, minimumSupport):
             else:
                 eleminatedItemsArray.append(CandidateList[i-1])
     return returnArray
-print(generateFrequentItemSet(CandidateList, noOfTransactions, minimumSupport))
 
-
-
-'''
-def aprioriAlgorithm(dataSet, minimumSupport, , uniqueItems, finalList(this will be empty)):
-    if len(finalList) == 2:
-        return finalList
-    else:
-
-
-
-'''
-
-
-
-'''
 #   This function creates Candidate set C1 from the given data set
 def generateC1(dataSet):
     itemDict = {}
@@ -132,6 +70,10 @@ def generateC2(l1Dict):
             returnArray.append(tempItemList)
             tempItemList = []
     return returnArray
+
+'' ''''''''''''''''''''''''''''
+    #   Definition section ends
+'' '''''''''''''''''''''''''''''
 
 # using case, set up the file name value
 fileName = "computerStuff.txt"
@@ -182,7 +124,7 @@ c2Dict = generateC2(l1Dict)
 
 
 
-
+'''
 #   Printing to test stuff
 print("\n")
 print("Dataset")
@@ -205,16 +147,4 @@ print("\n")
 print("C1: ")
 for i in c2Dict:
     print(i)
-'''
-
-
-
-'''
-def factorial(n):
-    if n == 1:
-        return 1
-    else:
-        return n * factorial(n-1)
-
-print(factorial(5))
 '''
