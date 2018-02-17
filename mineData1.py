@@ -1,5 +1,3 @@
-#[["A"], 2, ["B"], 3, ["C"], 8]
-
 def generateC1(dataSet):
     productDict = {}
     returneSet = []
@@ -31,27 +29,23 @@ def generateFrequentItemSet(CandidateList, noOfTransactions, minimumSupport, dat
     for k in frequentItemsArray:
         fatherFrequentArray.append(k)
 
+    print(fatherFrequentArray)
 
-    print(CandidateList)
-    print("\n")
-    print(len(CandidateList))
-    print("\n")
-
-    if len(CandidateList) == 3:
+    if len(frequentItemsArray) == 2:
+        #print("This will be returned")
         return fatherFrequentArray
+
     else:
         generateCandidateSets(dataSet, eleminatedItemsArray, frequentItemsArray, noOfTransactions, minimumSupport)
+
 
 def generateCandidateSets(dataSet, eleminatedItemsArray, frequentItemsArray, noOfTransactions, minimumSupport):
     onlyElements = []
     arrayAfterCombinations = []
-
     candidateSetArray = []
-
     for i in range(len(frequentItemsArray)):
         if i%2 == 0:
             onlyElements.append(frequentItemsArray[i])
-    # Trying starts
     for item in onlyElements:
         tempCombinationArray = []
         k = onlyElements.index(item)
@@ -63,8 +57,20 @@ def generateCandidateSets(dataSet, eleminatedItemsArray, frequentItemsArray, noO
                 if m not in tempCombinationArray:
                     tempCombinationArray.append(m)
             arrayAfterCombinations.append(tempCombinationArray)
-
             tempCombinationArray = []
+
+
+    sortedCombinationArray = []
+    uniqueCombinationArray = []
+
+    for i in arrayAfterCombinations:
+        sortedCombinationArray.append(sorted(i))
+    for i in sortedCombinationArray:
+        if i not in uniqueCombinationArray:
+            uniqueCombinationArray.append(i)
+
+
+    arrayAfterCombinations = uniqueCombinationArray
 
     for item in arrayAfterCombinations:
         count = 0
@@ -103,14 +109,6 @@ noOfTransactions = len(dataSet)
 
 firstCandidateSet = generateC1(dataSet)
 
-frequentItemSet = generateFrequentItemSet(firstCandidateSet, noOfTransactions, minimumSupport, dataSet, fatherFrequentArray, )
+frequentItemSet = generateFrequentItemSet(firstCandidateSet, noOfTransactions, minimumSupport, dataSet, fatherFrequentArray)
 
-print(frequentItemSet)
-
-
-'''
-one = ["one", "two", "three", "four", "five", "six", "seven"]
-two = ["three", "six", "seven"]
-print(set(two).issubset(set(one)))
-#print(two.issubset(one))
-'''
+#print(frequentItemSet)
