@@ -1,5 +1,15 @@
-import itertools
+'''
 
+                        Data Mining algorithm - Apriori Algorithm
+
+sculpted by: Jeet Patel
+sculpted on: February 20, 2018   
+
+'''
+
+
+import itertools
+#   This function generates the first candidate set using the dataset
 def generateC1(dataSet):
     productDict = {}
     returneSet = []
@@ -17,6 +27,9 @@ def generateC1(dataSet):
         tempArray = []
     return returneSet
 
+#   This function creates Frequent item sets by taking candidate sets as input
+#   At the end, this function calls generateCandidatSets by feeding the output of the
+#   current function as the input of the other function
 def generateFrequentItemSet(CandidateList, noOfTransactions, minimumSupport, dataSet, fatherFrequentArray):
     frequentItemsArray = []
     for i in range(len(CandidateList)):
@@ -39,6 +52,9 @@ def generateFrequentItemSet(CandidateList, noOfTransactions, minimumSupport, dat
     else:
         generateCandidateSets(dataSet, eleminatedItemsArray, frequentItemsArray, noOfTransactions, minimumSupport)
 
+#   This function creates Candidate sets by taking frequent sets as the input
+#   At the end, this function calls generateFrequentItemSets by feeding the output of the
+#   crrent function as the input of the other function
 def generateCandidateSets(dataSet, eleminatedItemsArray, frequentItemsArray, noOfTransactions, minimumSupport):
     onlyElements = []
     arrayAfterCombinations = []
@@ -76,6 +92,7 @@ def generateCandidateSets(dataSet, eleminatedItemsArray, frequentItemsArray, noO
             candidateSetArray.append(count)
     generateFrequentItemSet(candidateSetArray, noOfTransactions, minimumSupport, dataSet, fatherFrequentArray)
 
+#   This function takes all the frequent sets as the input and generates Association Rules
 def generateAssociationRule(freqSet):
     associationRule = []
     for item in freqSet:
@@ -96,6 +113,7 @@ def generateAssociationRule(freqSet):
                     length = length - 1
     return associationRule
 
+#   This function creates the final output of the algorithm by taking Association Rules as the input
 def aprioriOutput(rules, dataSet, minimumSupport, minimumConfidence):
     returnAprioriOutput = []
     for rule in rules:
@@ -112,10 +130,22 @@ def aprioriOutput(rules, dataSet, minimumSupport, minimumConfidence):
         supportOfXandYinPercentage = (supportOfXandY * 1.0 / noOfTransactions) * 100
         confidence = (supportOfXandYinPercentage / supportOfXinPercentage) * 100
         if confidence >= minimumConfidence:
+            supportOfXAppendString = "Support Of X: " + str(round(supportOfXinPercentage, 2))
+            supportOfXandYAppendString = "Support of X & Y: " + str(round(supportOfXandYinPercentage))
+            confidenceAppendString = "Confidence: " + str(round(confidence))
+
+            returnAprioriOutput.append(supportOfXAppendString)
+            returnAprioriOutput.append(supportOfXandYAppendString)
+            returnAprioriOutput.append(confidenceAppendString)
             returnAprioriOutput.append(rule)
+
     return returnAprioriOutput
 
-print("\n\n")
+#   These few statements are taking input from the user 
+#       Such as:
+#           Select a database to mine the data
+#           Minimum Support
+#           Mnimum Confidence
 print("Select from the following dataset:")
 print("1. Auto Mobile")
 print("2. Candies")
@@ -123,11 +153,10 @@ print("3. Computer Accesories")
 print("4. Food")
 print("5. Mobile Accesories")
 print("\n")
-fileNameInput = raw_input("Enter number (1,2,3,4,5): ")
-minimumSupport = raw_input('Enter minimum Support: ')
-minimumConfidence = raw_input('Enter minimum Confidence: ')
-print("\n")
-
+fileNameInput = input("Enter number (1,2,3,4,5): ")
+minimumSupport = input('Enter minimum Support: ')
+minimumConfidence = input('Enter minimum Confidence: ')
+print("\n") 
 fileName = ""
 
 if fileNameInput == '1':
@@ -142,8 +171,8 @@ if fileNameInput == '5':
     fileName = "mobileStuff.txt"
 
 
-minimumSupport = 40
-minimumConfidence = 60
+minimumSupport = int(minimumSupport)
+minimumConfidence = int(minimumConfidence)
 
 nonFrequentSets = []
 allFrequentItemSets = []
@@ -154,9 +183,8 @@ noOfTransactions = 0
 fatherFrequentArray = []
 something = 0
 
-#fileName = "food.txt"
-#fileName = "testing.txt"
 
+#   Reading the data file line by line
 with open(fileName,'r') as fp:
     lines = fp.readlines()
 
@@ -174,5 +202,15 @@ associationRules = generateAssociationRule(fatherFrequentArray)
 
 AprioriOutput = aprioriOutput(associationRules, dataSet, minimumSupport, minimumConfidence)
 
-for i in AprioriOutput:
-    print(str(i[0]) + "------>" + str(i[1]))
+
+counter = 1
+if len(AprioriOutput) == 0:
+    print("There are no association rules for this support and confidence.")
+else:
+    for i in AprioriOutput:
+        if counter == 4:
+            print(str(i[0]) + "------>" + str(i[1]))
+            counter = 0
+        else:
+            print(i, end='  ')
+        counter = counter + 1
