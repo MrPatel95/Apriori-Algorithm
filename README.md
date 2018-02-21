@@ -5,9 +5,10 @@ This is a Data Mining and Machine Learning algorithm called Apriori Algorithm. I
 <ul>
   <li>
     <h4>generateC1</h4>
-    This is function 1.
    </li>
-  <li>generateFrequentItemSet</li>
+  <li>
+    <h4>generateFrequentItemSet
+   </li>
   <li>generateCandidateSets</li>
   <li>generateAssociationRule</li>
   <li>aprioriOutput</li>
