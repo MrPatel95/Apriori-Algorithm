@@ -1,91 +1,45 @@
-# Apriori-Algorithm
+# Apriori Algorithm
 This is a Data Mining and Machine Learning algorithm called Apriori Algorithm. It takes input and generates association rules.
-
-
-# Project Title
-
-One Paragraph of project description goes here
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+* Clone this repo and fire up **generateDatabse.py file**. 
+* This file will create the five sample data sources for testing purposes. 
+* Ones you see the .txt data source files in your prject folder, you are ready to go.   
+* Now fire up **AprioriAlgorithm.py** file which is the actual code for this algorithm.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Need to have **python 3.6** installed on your machine. Other version support will be provided as soon as possible.
 
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+* The program takes **data source**, **Minimum Support in percentage** and **Minimum Confidence in percentage** as input.
+* **Data Source:** This is to select where the input is coming from. For this test, the data is coming from one of the five files that were created using generateDatabse.py.
+* **Minimum Support:** A minimum support is applied to find all frequent itemsets in a database.
+* **Minimum Confidence:** A minimum confidence is applied to these frequent itemsets in order to form rules.
+* **Result:** The result will show the association rules in the given dataset with the given minimum support and minimum confidence if there are any. If there are no association rules in the the set with the given support and confidence conditions, try to plug in some different (*if you didn't get any results, try feeding some lower values*) values of them.
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+* You are welcomed to modify **generateDatabse.py** file and try to come up with some new data set. 
+* You can use any data set which is a text file, comma seperated items and one transaction per line.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Python 3.6](https://www.python.org/downloads/release/python-360/)
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+Fork the repo and try to come up with some optimized version of the algorithm.
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* [Jeet Patel](https://github.com/MrPatel95)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+####Social
+It is crucial to stay social ;)
+* [LinkedIn](https://www.linkedin.com/in/jeet-patel-13aa27113/)
+* [Instagram](https://instagram.com/gujju.chokro/)
