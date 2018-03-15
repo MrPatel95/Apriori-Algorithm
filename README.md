@@ -33,7 +33,7 @@ Need to have **python 3.6** installed on your machine. Other version support wil
 
 Fork the repo and try to come up with some optimized version of the algorithm.
 
-## Authors
+## Author
 
 * [Jeet Patel](https://github.com/MrPatel95)
 
